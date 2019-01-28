@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.leena.mypills.MainActivity">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <include
+        layout="@layout/app_bar_layout"
+        android:id="@+id/main_page_toolbar"
+
+        >
+
+    </include>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_page_toolbar">
+
+    <com.mmi.MapmyIndiaMapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <ImageButton
+            android:id="@+id/currloc"
+            android:layout_width="57dp"
+
+            android:layout_height="47dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="28dp"
+            android:layout_marginEnd="43dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/location"
+            android:text="locate me!"
+
+            android:textSize="14sp" />
+            <android.support.v4.widget.DrawerLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/drawer_layout1"
+            >
+        <fragment
+
+            android:id="@+id/place_autocomplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                tools:layout="@layout/app_bar_layout"
+            />
+            </android.support.v4.widget.DrawerLayout>
+        <ImageButton
+            android:id="@+id/regev"
+            android:layout_width="69dp"
+            android:layout_height="51dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/currloc"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="-5dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/calendar"
+            android:text="Register Event" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="61dp"
+            android:layout_height="54dp"
+            android:layout_alignTop="@+id/currloc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-5dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/map" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/currloc"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="-28dp"
+            android:text="Add " />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/currloc"
+            android:layout_marginEnd="47dp"
+            android:layout_marginTop="-28dp"
+            android:text="Locate" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currloc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-28dp"
+            android:text="Find" />
+
+
+    </com.mmi.MapmyIndiaMapView>
+
+    </LinearLayout>
+</RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginBottom="3dp"
+        app:menu="@menu/navigation_menu">
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>
