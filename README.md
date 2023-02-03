@@ -1,4 +1,4 @@
-# Event_Flix1
+# Event_Flix
 Event management and monitoring app developed using
 1.Firebase
 2.MapMyIndia
